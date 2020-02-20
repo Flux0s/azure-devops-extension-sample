@@ -13,6 +13,7 @@
     "url": "https://github.com/Microsoft/azure-devops-extension-sample.git"
   },
   "scripts": {
+    "dev": "node server.js",
     "clean": "rimraf ./dist",
     "compile": "npm run clean && webpack --mode production",
     "compile:dev": "npm run clean && webpack --mode development",
@@ -23,6 +24,7 @@
     "publish-extension": "tfx extension publish --manifest-globs azure-devops-extension.json src/Samples/**/*.json"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "azure-devops-extension-api": "~1.157.0",
     "azure-devops-extension-sdk": "~2.0.11",
     "azure-devops-ui": "~2.164.0",
@@ -35,6 +37,8 @@
     "base64-inline-loader": "^1.1.1",
     "copy-webpack-plugin": "^4.5.4",
     "css-loader": "~1.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "file-loader": "~2.0.0",
     "node-sass": "~4.12.0",
     "rimraf": "~2.6.2",
